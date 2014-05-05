@@ -9,6 +9,7 @@
     <!-- Bootstrap -->
     <link href="view/css/bootstrap-theme.min.css" rel="stylesheet">
     <link href="view/css/bootstrap.min.css" rel="stylesheet">
+    <link href="view/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
     <link href="view/css/style.css" rel="stylesheet">
 
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
@@ -27,7 +28,7 @@
                 <a href="/ihm/" type="button" class="btn btn-primary">
                     <span class="glyphicon glyphicon-home"></span>
                 </a>
-                <a type="button" class="btn btn-primary">
+                <a type="button" class="btn btn-primary" id="datetimepicker">
                     <span class="glyphicon glyphicon-calendar"></span>
                 </a>
                 <a href="?date=<?php echo $date_t; ?>" type="button" class="btn btn-primary">
@@ -43,7 +44,9 @@
         </div>
 
         <div class="row" id="resultat"></div>
-
+        <div class="row" id="calendrier" style="display:none">
+            <div id="calendar"></div>
+        </div>
         <!-- Second row containing the table -->
         <div class="row text-center" >
             <div class="row">
@@ -76,11 +79,28 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="view/js/bootstrap.min.js"></script>
     <script src="view/js/search_ajax.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="view/js/datepicker.js"></script>
+<script>
+    $('#calendar').datepicker({
+        inline: true,
+        firstDay: 1,
+        showOtherMonths: true,
+        dayNamesMin: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
+    });
+</script>
     <script>
         $( "#click" ).click(function() {
           $( "#hide" ).toggle();
         });
     </script>
+
+    <script>
+        $( "#datetimepicker" ).click(function() {
+          $( "#calendrier" ).toggle();
+        });
+    </script>
+
 
   </body>
 </html>
