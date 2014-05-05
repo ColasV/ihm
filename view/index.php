@@ -38,9 +38,11 @@
 
         <div class="row text-center search" id="hide" style="display:none;">
             <div class="col-xs-12">
-            <input type="text" class="form-control" placeholder="Text input">
+            <input type="text" class="form-control" id="champ_recherche" placeholder="Text input">
         </div>
         </div>
+
+        <div class="row" id="resultat"></div>
 
         <!-- Second row containing the table -->
         <div class="row text-center" >
@@ -73,6 +75,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="view/js/bootstrap.min.js"></script>
+    <script src="view/js/search_ajax.js"></script>
     <script>
         $( "#click" ).click(function() {
           $( "#hide" ).toggle();

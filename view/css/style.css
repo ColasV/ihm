@@ -6,3 +6,7 @@ html, body {
 .search {
     margin-top:5px;
 }
+
+body {
+    padding-top:5px;
+}
