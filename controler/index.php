@@ -1,6 +1,7 @@
 <?php
 include('dao/coursdao.php');
 include('dao/peopledao.php');
+
 if ($search) {
     if (empty($recherche)) {
         $data = array();
@@ -8,6 +9,11 @@ if ($search) {
         $data = getPeople($recherche);
     }
     include('view/search.php');
+} else if($semaine) {
+    $data = getCoursSemaine();
+    include('view/header.php');
+    include('view/week.php');
+    include('view/footer.php');
 } else {
     if (!empty($_GET['date'])) {
         $str = $_GET['date'];
@@ -26,7 +32,9 @@ if ($search) {
         $date_t = date('d-m-o',time() + 60*60*24);
         $cours = getCours(date('N'));
     }
-
+    include('view/header.php');
     include('view/index.php');
+    include('view/footer.php');
 }
+
 ?>

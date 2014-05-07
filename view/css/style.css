@@ -13,7 +13,6 @@ body {
 
 #calendar {
     margin-top:5px;
-    margin-left:5%;
 }
 
 .ui-datepicker,
@@ -31,7 +30,7 @@ body {
 
 .ui-datepicker {
     display: none;
-    width: 350px;
+    width: 305px;
     padding: 15px;
     cursor: default;
 
@@ -46,6 +45,8 @@ body {
     border-radius: 3px;
 
 border:solid 1px grey;
+
+margin:auto;
 
     /*-webkit-box-shadow: 0px 1px 1px rgba(255,255,255, .1), inset 0px 1px 1px rgb(0,0,0);
     -moz-box-shadow: 0px 1px 1px rgba(255,255,255, .1), inset 0px 1px 1px rgb(0,0,0);

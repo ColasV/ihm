@@ -5,6 +5,7 @@ class Cours {
     private $nom;
     private $salle;
     private $horaire;
+    private $jour;
 
 
     function __construct($nom,$salle,$horaire) {
@@ -13,6 +14,9 @@ class Cours {
         $this->horaire = $horaire;
     }
 
+    public function setJour($jour) {
+        $this->jour = $jour;
+    }
 
     public function getNom() {
         return $this->nom;
@@ -24,6 +28,10 @@ class Cours {
 
     public function getHoraire() {
         return $this->horaire;
+    }
+
+    public function getJour() {
+        return $this->jour;
     }
 
 
