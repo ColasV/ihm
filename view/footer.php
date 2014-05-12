@@ -39,6 +39,8 @@ $(document).on("change", "#calendar", function () {
 
 })
 
+
+
 var currentDate = $( "#calendar" ).datepicker( "getDate" );
 </script>
 

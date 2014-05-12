@@ -19,3 +19,7 @@
             }
             ?>
         </div>
+
+        <div class="container">
+            <a href="?d=semaine&week=" type="button" class="btn btn-primary btn-block">Reste de la semaine</a>
+        </div>

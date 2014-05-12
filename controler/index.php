@@ -11,7 +11,30 @@ if ($search) {
     include('view/search.php');
 } else if($semaine) {
     $data = getCoursSemaine();
-    include('view/header.php');
+
+    $year = 2014;
+    $week_no = $week;
+
+    $week_start = new DateTime();
+    $week_start->setISODate($year,$week_no);
+    $week_end = clone $week_start;
+    $week_end = $week_end->add(new DateInterval("P1W"));
+
+
+
+    $week_name = array("Lundi","Mardi","Mercredi","Jeudi","Vendredi");
+
+    if($week_no) {
+        $date_b = $week_no -1;
+        $date_a = $week_no + 1;
+    } else {
+        $weekNumber = date("W");
+        $date_b = $weekNumber -1;
+        $date_a = $weekNumber + 1;
+    }
+
+
+    include('view/header_week.php');
     include('view/week.php');
     include('view/footer.php');
 } else {
